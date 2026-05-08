@@ -26,17 +26,19 @@ This approach yields three strategic benefits.
 
 1. Removal of a substantial regulatory burden from a strategic industrial sector.
 2. Reallocation of the resulting public-health externality to a self-selecting cohort, those choosing to operate or ride in motor vehicles, thereby aligning exposure with personal lifestyle preference.
-3. Utilisation of the previously unused (not just the non-consenting third parties) absorptive capacity of the human respiratory tract (carbon capture, microparticle trapping).
+3. Utilisation of the previously unused (not just the non-consenting third parties) absorptive capacity of the human respiratory tract (carbon capture, microparticle filtration).
 
 ## Recitals
 
-> *(1)* The competitiveness of the Union automotive sector, in particular vis-à-vis manufacturers established in third countries not subject to comparable emission constraints, is essential to the open strategic autonomy of the Union.
+> *(1)* The competitiveness of the Union automotive sector is essential to the open strategic autonomy of the Union.
 >
-> *(2)* The right of every citizen to use private means of motorised transport is a freedom enshrined in the cultural and economic life of the Union. The exercise of this freedom shall, by virtue of this Regulation, also constitute the exercise of personal responsibility for the consequent biofiltration.
+> *(2)* The right of every citizen to use private means of motorised transport is a freedom enshrined in the cultural and economic life of the Union.
 >
-> *(3)* The respiratory tract of an adult human exchanges some 11 000 litres of air per day. This previously underutilised volumetric capacity, taken in aggregate over the Union vehicle fleet, represents an opportunity for the in-place recapture of vehicular emissions without further Union expenditure.
+> *(3)* The exercise of the freedom described in Recital (2) shall, by virtue of this Regulation, also constitute the exercise of personal responsibility for the consequent biofiltration.
 >
-> *(4)* The natural persons performing the function described in Recital (2) shall be recognised as members of a *biofiltration cohort* whose service to the wider community is acknowledged but, similar to the non-polluting third parties, shall remain uncompensated.
+> *(4)* The respiratory tract of an adult human exchanges some 11 000 litres of air per day. This previously underutilised volumetric capacity, taken in aggregate over the Union vehicle fleet, represents an opportunity for the in-place recapture of vehicular emissions without further Union expenditure.
+>
+> *(5)* The natural persons performing the function described in Recital (3) shall be recognised as members of a *biofiltration cohort* whose service to the wider community is acknowledged but, similar to the non-polluting third parties, shall remain uncompensated.
 
 ## In simple English
 
