@@ -122,6 +122,9 @@ function parseFrontmatter(text) {
 //   - list / 1. ordered list
 //   ---  horizontal rule
 //   **bold**, *italic*, `code`, [text](url), <https://...>
+//   :::name              -> wrap content in <div class="name">…</div>;
+//                           close with a line containing only ':::'.
+//                           Multiple classes accepted: ':::callout warning'.
 // Tables and images are not (yet) supported.
 // ---------------------------------------------------------------------------
 
@@ -151,6 +154,33 @@ function mdToHtml(md) {
 
   while (i < lines.length) {
     const line = lines[i];
+
+    // custom fenced block: :::name … :::
+    // Tracks fence depth so blocks can nest (e.g. an outer :::science-zone
+    // wrapping an inner :::callout). Opening fences must include a class
+    // name; closing fences are bare ':::' on their own line.
+    const fence = line.match(/^:::\s*(\S.*?)\s*$/);
+    if (fence) {
+      const cls = fence[1];
+      i++;
+      const block = [];
+      let depth = 1;
+      while (i < lines.length && depth > 0) {
+        const l = lines[i];
+        if (/^:::\s*\S/.test(l)) {
+          depth++;
+          block.push(l);
+        } else if (/^:::\s*$/.test(l)) {
+          depth--;
+          if (depth > 0) block.push(l);
+        } else {
+          block.push(l);
+        }
+        i++;
+      }
+      out.push(`<div class="${escapeAttr(cls)}">\n${mdToHtml(block.join('\n'))}\n</div>`);
+      continue;
+    }
 
     // horizontal rule
     if (/^-{3,}\s*$/.test(line.trim())) {
@@ -228,6 +258,7 @@ function mdToHtml(md) {
       !/^>\s?/.test(lines[i]) &&
       !/^\s*[-*]\s+/.test(lines[i]) &&
       !/^\s*\d+\.\s+/.test(lines[i]) &&
+      !/^:::/.test(lines[i]) &&
       !/^-{3,}\s*$/.test(lines[i].trim())
     ) {
       para.push(lines[i]);
@@ -395,7 +426,7 @@ function siteHeader(currentPath) {
     <div class="container primary-nav__inner">
       <a href="${currentPath === '/' ? '#' : '../index.html'}">Home</a>
       <a href="#">Policies</a>
-      <a href="#" aria-current="page">Legislation</a>
+      <a href="${currentPath === '/' ? '#' : '../index.html'}" aria-current="page">Legislation</a>
       <a href="#">Consultations</a>
       <a href="#">Documents</a>
       <a href="#">Newsroom</a>

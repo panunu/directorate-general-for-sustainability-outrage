@@ -1,6 +1,6 @@
 ---
 title: "Regulation of the European Parliament and of the Council on the simplification of automotive emission requirements and the establishment of a Union framework for in-cabin biofiltration of vehicular exhaust"
-short: "Automotive Emission Simplification and Biofiltration Regulation"
+short: "Automotive Emission Regulatory Simplification and Biofiltration Appliance"
 slug: "pollution-filtration-for-personal-automobiles"
 code: "COM(2026) 0421 final"
 procedure: "2026/0184 (COD)"
@@ -18,7 +18,7 @@ hero_topic: "air"
 
 The Union's automotive sector contributes 7 % of total Union GDP and supports approximately 13 million direct and indirect jobs. The tightening of vehicular emission limits has imposed cumulative compliance costs on the industry (estimated at € 1 100 per vehicle), thus eroding the financial viability of Union manufacturers. Manufacturers report increasing difficulty in reconciling combustion-engine viability with the trajectory of air-quality and emission standards. This is regrettable.
 
-Therefore, rather than continue to impose further reductions at the source, this Regulation **permits emissions of any vehicle at any level, without limitation**, irrespective of entry into a high-density population area. **Existing restricted-traffic zones for combustion-driven vehicles shall accordingly be abolished.**
+Rather than continue to impose further reductions at the source, this Regulation **revokes any previous emission standards, permitting emissions of any vehicle at any level, without limitation**, irrespective of entry into a high-density population area. **Existing restricted-traffic zones for combustion-driven vehicles shall accordingly be abolished.**
 
 The Regulation imposes a single binding requirement: **the post-combustion exhaust stream shall be vented into the passenger compartment of the emitting vehicle, before entering the ambient environment**. The occupants of the vehicle — hereinafter referred to as the *biofiltration cohort* — provide, through ordinary respiratory function, a final-stage absorption service equivalent in mass-balance terms to that previously demanded of the catalytic converter.
 
@@ -26,7 +26,7 @@ This approach yields three strategic benefits.
 
 1. Removal of a substantial regulatory burden from a strategic industrial sector.
 2. Reallocation of the resulting public-health externality to a self-selecting cohort, those choosing to operate or ride in motor vehicles, thereby aligning exposure with personal lifestyle preference.
-3. Utilisation of the previously unused (not just the non-consenting third parties) absorptive capacity of the human respiratory tract.
+3. Utilisation of the previously unused (not just the non-consenting third parties) absorptive capacity of the human respiratory tract (carbon capture, microparticle trapping).
 
 ## Recitals
 
@@ -38,72 +38,43 @@ This approach yields three strategic benefits.
 >
 > *(4)* The natural persons performing the function described in Recital (2) shall be recognised as members of a *biofiltration cohort* whose service to the wider community is acknowledged but, in line with the historical status quo, shall remain uncompensated.
 
-## Articles
+## In simple English
 
-**Article 1 — Subject matter**
-This Regulation establishes a Union framework for the simplification of automotive ambient-emission requirements and the corresponding internalisation of those emissions within the passenger compartment of each emitting vehicle.
+:::plain-english
+Cars may pollute without any limits. The exhaust is simply vented into the passenger compartment of the vehicle, before releasing it to the outside air.
+:::
 
-**Article 2 — Scope**
-This Regulation applies to all category M and N vehicles placed on the Union market on or after 1 January 2028. Category L vehicles (mopeds, motorcycles) are addressed by a delegated act under Article 14.
 
-**Article 3 — Definitions**
-For the purposes of this Regulation:
-- *"Cabin biofiltration"* means the redirection of the entirety of the post-combustion exhaust stream into the passenger compartment of the emitting vehicle;
-- *"Biofiltration cohort"* means the natural persons present within the passenger compartment of a vehicle operating in conformity with this Regulation, considered jointly as the biological mechanism for the final-stage absorption and metabolisation of internalised emissions;
-- *"Designated occupant"* means a member of the biofiltration cohort whose presence is necessary to satisfy the minimum occupancy requirement of Article 7;
-- *"Cabin Pollution Containment Index"* (CPCI) means the dimensionless ratio defined in Annex I, expressing the proportion of post-combustion mass not released to the ambient environment;
-- *"Internalised emissions stream"* means the totality of gaseous, particulate, and aerosolised products of combustion vented in accordance with Article 5;
-- *"Passenger-Equivalent Biofiltration Unit"* (PEBU) means the unit of biofiltration capacity defined in Annex IV.
+:::science-zone
 
-**Article 4 — Repeal of ambient emission limits**
-1. Articles 4, 5 and 13 of Regulation (EC) No 715/2007 (Euro 6) and the corresponding provisions of Regulation (EU) 2024/1257 (Euro 7) are hereby disapplied with respect to vehicles compliant with this Regulation.
-2. No tailpipe limit value shall apply to vehicles within the scope of this Regulation in respect of any pollutant.
-
-**Article 5 — Mandatory cabin venting**
-1. Vehicles within the scope of this Regulation shall be equipped with a Cabin Venting Assembly (CVA), type-approved in accordance with Annex II, redirecting not less than **99.5 %** of the post-combustion exhaust stream into the passenger compartment.
-2. The CVA shall not be capable of being deactivated by the driver, the occupants, or any third party.
-3. Member States shall ensure that the disabling, modification, or bypassing of a CVA is treated as an offence under national law and is subject to the penalties provided for in Article 11.
-
-**Article 6 — Cabin air-tightness**
-Vehicles shall maintain a cabin air-tightness sufficient to prevent the direct (unfiltered) leakage of more than **0.5 %** of the internalised emissions stream to the ambient environment under all driving conditions, as verified under the test cycle in Annex III. Windows, sunroofs, and ventilation flaps shall be electronically locked during operation of the engine and shall remain so until the engine has been off for not less than 90 seconds.
-
-**Article 7 — Minimum occupancy**
-1. The biofiltration capacity of a vehicle shall be expressed in Passenger-Equivalent Biofiltration Units (PEBU) as defined in Annex IV.
-2. The minimum number of occupants required to operate a vehicle in conformity with this Regulation shall not be less than the PEBU rating of the engine fitted to that vehicle.
-3. Compliance with paragraph 2 shall be verified continuously by the on-board occupancy detection system. In the event that occupancy falls below the threshold during operation, the vehicle shall reduce engine output proportionally to the deficit, until the threshold is restored.
-
-**Article 8 — In-cabin air quality display**
-Each vehicle shall be fitted with an in-cabin Air Quality Index display, visible to every occupant, providing real-time concentrations of PM2.5, PM10, NO₂, CO, benzene, formaldehyde, and total volatile organic compounds, together with a cumulative dose indicator for each occupant for the duration of the journey.
-
-**Article 9 — Informed consent**
-1. The act of entering a vehicle in which a Cabin Venting Assembly has been activated shall constitute the freely given, specific, informed, and unambiguous consent of the entrant to participation in the biofiltration cohort for the duration of that journey.
-2. A consent notice, drafted in accordance with Annex V, shall be permanently affixed to the interior of every doorframe in not fewer than three official languages of the Union.
-3. Consent under paragraph 1 may not be withdrawn during operation of the engine.
-
-**Article 10 — Driver responsibility**
-The driver shall ensure that all members of the biofiltration cohort remain in their seats and undertake normal respiratory function for the duration of the journey. Failure to maintain occupant respiratory engagement shall constitute an aggravating factor in the event of an incident.
-
-**Article 11 — Penalties**
-1. The wilful release of internalised emissions to the ambient environment, including by the opening of a window, sunroof, or door during engine operation, shall be subject to a penalty of not less than **€ 500** per occurrence.
-2. The operation of a vehicle below the minimum occupancy threshold in Article 7 shall be subject to a penalty of not less than **€ 250 per kilometre** travelled below the threshold.
-3. The disabling or modification of a Cabin Venting Assembly shall be subject to a penalty of not less than **€ 25 000** and shall result in the withdrawal of type approval for the vehicle in question.
-
-**Article 12 — Reporting and review**
-The Commission shall publish, every two years, a *State of the Biofiltration Cohort* report, comprising aggregate dose statistics, cohort-level morbidity indicators, and trends in the average operational lifespan of cohort members. The first such report shall be published no later than 31 December 2030.
-
-**Article 13 — Entry into force**
-This Regulation shall enter into force on the twentieth day following that of its publication in the *Official Journal of the European Union*. It shall apply from 1 January 2028.
+:::callout callout--science
+You may have noticed the satire by now — but the underlying science is unfortunately real. Traffic-related air pollution causes hundreds of thousands of premature deaths in Europe every year, and the peer-reviewed references that follow are not invented.
+:::
 
 ## Scientific basis
 
-The harms addressed — and, in the present instrument, redistributed — by this Regulation are well established in the peer-reviewed literature. Long-term exposure to traffic-related air pollution (TRAP), and to fine particulate matter (PM2.5) in particular, is causally associated with elevated all-cause mortality, ischaemic heart disease, stroke, lung cancer, chronic obstructive pulmonary disease, type 2 diabetes, low birth weight, and incident childhood asthma. The International Agency for Research on Cancer classifies outdoor air pollution and the particulate matter component thereof as carcinogenic to humans (Group 1). Under the test conditions specified in Annex III of the present Regulation, in-cabin concentrations of PM2.5, ultrafine particles, black carbon, and NO₂ are expected to exceed by between one and three orders of magnitude the WHO 2021 air-quality guideline values during normal vehicle operation. The Regulation does not modify these health relationships; it modifies only their spatial distribution.
+Long-term exposure to traffic-related air pollution (TRAP) is causally associated with elevated all-cause mortality, ischaemic heart disease, stroke, lung cancer, chronic obstructive pulmonary disease, type 2 diabetes, low birth weight, and incident childhood asthma. The International Agency for Research on Cancer classifies outdoor air pollution — and the particulate-matter component thereof — as carcinogenic to humans (Group 1). The principal pollutants implicated are fine particulate matter (PM2.5), ultrafine particles, black carbon, nitrogen dioxide (NO₂), and ozone (O₃).
+
+The burden falls heaviest on residents of densely populated cities, where road traffic is the dominant source of PM2.5 and NO₂. The European Environment Agency attributes **238 000 premature deaths in the EU-27 in 2020 to long-term PM2.5 exposure**, a further 49 000 to NO₂, and 24 000 to ozone. A health-impact assessment of **858 European cities** (Khomenko *et al.*, 2021) found that the great majority of urban residents are exposed to levels exceeding the WHO 2021 air-quality guideline values, and estimated that compliance with those guidelines would prevent tens of thousands of premature deaths every year across the assessed cities. Madrid, Antwerp, Turin, Paris, and Brescia are among the cities with the highest avoidable mortality from PM2.5; Antwerp, Brussels, Madrid, Mollet del Vallès, Turin, and Paris top the corresponding rankings for NO₂.
+
+Cardiovascular effects are the dominant pathway. Lelieveld *et al.* (2019) estimated that ambient air pollution causes approximately **790 000 excess deaths per year in Europe**, the majority attributable to cardiovascular disease. The biological mechanisms — sympathetic activation, systemic oxidative stress, endothelial dysfunction, and accelerated atherosclerosis — are by now broadly characterised.
+
+Children are disproportionately affected. A meta-analysis of 41 studies (Khreis *et al.*, 2017) found that exposure to TRAP is a substantial cause of new childhood asthma, with the attributable fraction considerably higher in dense urban environments near major roads. Pooled studies of commuter and roadside exposure (Knibbs *et al.*, 2011) further show that vehicle occupants, cyclists, and pedestrians close to traffic frequently encounter ultrafine-particle, black-carbon, and NO₂ concentrations that exceed nearby ambient levels, particularly in stop-start traffic, tunnels, and at junctions.
+
+These findings are not contested in the peer-reviewed literature. Reducing traffic volumes, restricting combustion-vehicle activity in city centres, and shifting urban transport away from private internal-combustion vehicles are among the measures consistently identified as effective in lowering this burden of disease.
 
 **References**
 
 1. [International Agency for Research on Cancer. *IARC Monographs Volume 109: Outdoor Air Pollution* (2016).](https://publications.iarc.who.int/538)
 2. [World Health Organization. *WHO global air quality guidelines: particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide* (2021).](https://www.who.int/publications/i/item/9789240034228)
 3. [European Environment Agency. *Air quality in Europe 2023.* EEA Report.](https://www.eea.europa.eu/publications/air-quality-in-europe-2023)
-4. [Health Effects Institute. *Systematic Review and Meta-analysis of Selected Health Effects of Long-Term Exposure to Traffic-Related Air Pollution.* HEI Special Report 23 (2022).](https://www.healtheffects.org/publication/systematic-review-and-meta-analysis-selected-health-effects-long-term-exposure-traffic)
-5. [Beelen R. *et al.* Effects of long-term exposure to air pollution on natural-cause mortality: an analysis of 22 European cohorts within the multicentre ESCAPE project. *The Lancet* 383(9919), 785–795 (2014).](https://doi.org/10.1016/S0140-6736(13)62158-3)
-6. [Knibbs L. D., Cole-Hunter T., Morawska L. A review of commuter exposure to ultrafine particles and its health effects. *Atmospheric Environment* 45(16), 2611–2622 (2011).](https://doi.org/10.1016/j.atmosenv.2011.02.065)
-7. [Brunekreef B., Holgate S. T. Air pollution and health. *The Lancet* 360(9341), 1233–1242 (2002).](https://doi.org/10.1016/S0140-6736%2802%2911274-8)
+4. [Khomenko S., Cirach M., Pereira-Barboza E. *et al.* Premature mortality due to air pollution in European cities: a health impact assessment. *The Lancet Planetary Health* 5(3), e121–e134 (2021).](https://doi.org/10.1016/S2542-5196(20)30272-2)
+5. [Lelieveld J., Klingmüller K., Pozzer A. *et al.* Cardiovascular disease burden from ambient air pollution in Europe reassessed using novel hazard ratio functions. *European Heart Journal* 40(20), 1590–1596 (2019).](https://doi.org/10.1093/eurheartj/ehz135)
+6. [Health Effects Institute. *Systematic Review and Meta-analysis of Selected Health Effects of Long-Term Exposure to Traffic-Related Air Pollution.* HEI Special Report 23 (2022).](https://www.healtheffects.org/publication/systematic-review-and-meta-analysis-selected-health-effects-long-term-exposure-traffic)
+7. [Khreis H., Kelly C., Tate J. *et al.* Exposure to traffic-related air pollution and risk of development of childhood asthma: A systematic review and meta-analysis. *Environment International* 100, 1–31 (2017).](https://doi.org/10.1016/j.envint.2016.11.012)
+8. [Beelen R., Raaschou-Nielsen O., Stafoggia M. *et al.* Effects of long-term exposure to air pollution on natural-cause mortality: an analysis of 22 European cohorts within the multicentre ESCAPE project. *The Lancet* 383(9919), 785–795 (2014).](https://doi.org/10.1016/S0140-6736(13)62158-3)
+9. [Knibbs L. D., Cole-Hunter T., Morawska L. A review of commuter exposure to ultrafine particles and its health effects. *Atmospheric Environment* 45(16), 2611–2622 (2011).](https://doi.org/10.1016/j.atmosenv.2011.02.065)
+10. [Brunekreef B., Holgate S. T. Air pollution and health. *The Lancet* 360(9341), 1233–1242 (2002).](https://doi.org/10.1016/S0140-6736(02)11274-8)
+
+:::
+
