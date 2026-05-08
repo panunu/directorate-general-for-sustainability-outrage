@@ -1,0 +1,62 @@
+<!--
+  templates/about.html — layout for the About page.
+
+  Edit copy directly. Bracketed [placeholder] passages mark spots to replace.
+  Placeholders ({{name}}) are substituted by build.js at build time:
+
+    {{site_dg_long}}, {{site_dg_short}}, {{site_parent}}
+    {{top_banner}}, {{site_header}}, {{site_footer}}
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — {{site_dg_long}}</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/search.js" defer></script>
+</head>
+<body>
+{{top_banner}}
+{{site_header}}
+
+<main id="main">
+  <section class="document document--single">
+    <div class="container document__inner">
+
+      <p class="breadcrumb"><a href="index.html">Home</a> <span>›</span> About</p>
+
+      <header class="document__head">
+        <h1>About {{site_dg_short}}</h1>
+        <p class="document__short"><em>What this site is, and what it is not.</em></p>
+      </header>
+
+      <article class="document__body">
+
+        <h2>About this directorate</h2>
+        <p>[Brief description of the project — who is behind it, what are you publishing here, and how the site relates to the work of {{site_dg_long}}. Replace with your own copy.]</p>
+
+        <h2>Why this exists</h2>
+        <p>[A paragraph or two on the artistic and political intent. What is the site responding to? Why dress real research in fictional EU directives? Replace with your own copy.]</p>
+
+        <h2>How initiatives are developed</h2>
+        <p>[Optional: explain the workflow — how each initiative pairs an imagined policy with peer-reviewed research, and where that research is sourced. Replace with your own copy.]</p>
+
+        <h2>Disclaimer</h2>
+        <p>This is a fictional work of political satire. It is not affiliated with the European Union or any of its institutions. All initiatives, document codes, financial envelopes, and Directorates-General depicted on this site are imaginary.</p>
+        <p>The peer-reviewed research cited in each initiative's <em>Scientific basis</em> section is, however, real and verifiable. The policies satirising those findings are not.</p>
+
+        <h2>Author</h2>
+        <p>[Your name, role, and any links you'd like the reader to follow. Replace with your own information.]</p>
+
+        <h2>Contact</h2>
+        <p>[Email address or contact-form link. Replace with your own.]</p>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+{{site_footer}}
+</body>
+</html>

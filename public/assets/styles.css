@@ -551,6 +551,16 @@ svg {
   }
 }
 
+/* Single-column variant — used by the About page (and any other detail page
+   that doesn't need a sidebar). Constrains and centres the content. */
+.document--single .document__head,
+.document--single .document__body,
+.document--single .breadcrumb {
+  max-width: var(--document-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .document__aside {
   font-size: 13px;
   border-left: 4px solid var(--eu-blue);

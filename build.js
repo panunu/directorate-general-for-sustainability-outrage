@@ -414,9 +414,26 @@ function topBanner() {
 
 function siteHeader(currentPath) {
   const langs = ['EN', 'DE', 'FR', 'ES', 'IT', 'NL', 'SV', 'FI'];
+
+  // currentPath is one of:
+  //   '/'                          → index page
+  //   '/about.html'                → about page
+  //   '/legislation/<slug>.html'   → initiative detail page
+  // Detail pages are nested one level deeper, so links to root pages need a
+  // '../' prefix from there. The "current section" indicator follows the
+  // active page.
+  const isInLegislationDir = currentPath.startsWith('/legislation/');
+  const isAbout = currentPath === '/about.html';
+  const isLegislationSection = !isAbout; // index + detail pages
+  const rel = isInLegislationDir ? '../' : '';
+  const homeHref = currentPath === '/' ? '#' : `${rel}index.html`;
+  const indexHref = `${rel}index.html`;
+  const aboutHref = `${rel}about.html`;
+  const cur = (active) => (active ? ' aria-current="page"' : '');
+
   return `<header class="masthead">
   <div class="container masthead__inner">
-    <a class="brand" href="${currentPath === '/' ? '#' : '../index.html'}">
+    <a class="brand" href="${homeHref}">
       <span class="brand__emblem">${emblemSvg(48)}</span>
       <span class="brand__text">
         <span class="brand__parent">${escapeHtml(SITE.parent)}</span>
@@ -431,11 +448,11 @@ function siteHeader(currentPath) {
     <div class="container primary-nav__inner">
       <a aria-disabled="true">Home</a>
       <a aria-disabled="true">Policies</a>
-      <a href="${currentPath === '/' ? '#' : '../index.html'}" aria-current="page">Legislation</a>
+      <a href="${indexHref}"${cur(isLegislationSection)}>Legislation</a>
       <a aria-disabled="true">Consultations</a>
 <!--      <a aria-disabled="true">Documents</a>-->
       <a aria-disabled="true">Newsroom</a>
-      <a href="#">About</a>
+      <a href="${aboutHref}"${cur(isAbout)}>About</a>
       <span class="primary-nav__search" role="search">
         <input type="search" placeholder="Search legislation…" aria-label="Search">
       </span>
@@ -571,6 +588,19 @@ function indexPage(initiatives) {
   });
 }
 
+function aboutPage() {
+  const tpl = loadTemplate('about.html');
+  return renderTemplate(tpl, {
+    site_parent: escapeHtml(SITE.parent),
+    site_dg_long: escapeHtml(SITE.dgLong),
+    site_dg_short: escapeHtml(SITE.dgShort),
+    site_disclaimer: escapeHtml(SITE.disclaimer),
+    top_banner: topBanner(),
+    site_header: siteHeader('/about.html'),
+    site_footer: siteFooter(),
+  });
+}
+
 function initiativePage({ meta, body, slug }) {
   const bodyHtml = mdToHtml(body);
   // Document reference and status appear prominently in the side panel's lead
@@ -675,6 +705,9 @@ function build() {
 
   // Write index.
   fs.writeFileSync(OUT_INDEX, indexPage(initiatives));
+
+  // Write the About page.
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'about.html'), aboutPage());
 
   // Write each initiative.
   for (const init of initiatives) {
