@@ -130,8 +130,9 @@ function inline(s) {
   s = escapeHtml(s);
   // Bare autolinks <https://...>
   s = s.replace(/&lt;(https?:[^&\s]+)&gt;/g, (_, u) => `<a href="${u}">${u}</a>`);
-  // [text](url)
-  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, t, u) => `<a href="${u}">${t}</a>`);
+  // [text](url) — allows one level of balanced parens inside the URL so
+  // that DOIs such as `10.1016/S0140-6736(13)62158-3` survive intact.
+  s = s.replace(/\[([^\]]+)\]\(((?:[^()]|\([^()]*\))*)\)/g, (_, t, u) => `<a href="${u}">${t}</a>`);
   // **bold**
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   // *italic*
@@ -533,13 +534,13 @@ function indexPage(initiatives) {
 
 function initiativePage({ meta, body, slug }) {
   const bodyHtml = mdToHtml(body);
+  // Document reference and status appear prominently in the side panel's lead
+  // block; the facts list below holds the remaining metadata.
   const facts = [
-    ['Document reference', meta.code],
     ['Interinstitutional file', meta.procedure],
     ['Procedure', meta.procedure_label],
     ['Lead service', meta.lead],
     ['Date of latest action', meta.date],
-    ['Status', meta.status],
     ['Financial envelope', meta.funding],
     ['Funding source', meta.funding_source],
   ];
@@ -548,26 +549,30 @@ function initiativePage({ meta, body, slug }) {
     .map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd></div>`)
     .join('\n');
 
+  const breadcrumbLast = meta.short || meta.code || slug;
+
   const content = `
 <section class="document">
   <div class="container document__inner">
-    <p class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../index.html">Legislation</a> <span>›</span> ${escapeHtml(meta.code || meta.short || slug)}</p>
+    <p class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../index.html">Legislation</a> <span>›</span> ${escapeHtml(breadcrumbLast)}</p>
 
     <div class="document__hero">${heroSvg(meta.hero_topic)}</div>
 
     <header class="document__head">
-      <p class="document__code">${escapeHtml(meta.code || '')}</p>
       <h1>${escapeHtml(meta.title || meta.short || slug)}</h1>
-      <p class="document__short"><em>Short title:</em> ${escapeHtml(meta.short || '')}</p>
-      <div class="document__meta-row">
-        <span class="${statusClass(meta.status)}">${escapeHtml(meta.status || '')}</span>
-        <span class="document__date">${escapeHtml(meta.date || '')}</span>
-        <span class="document__file">${escapeHtml(meta.procedure || '')}</span>
-      </div>
+      ${meta.short ? `<p class="document__short"><em>Short title:</em> ${escapeHtml(meta.short)}</p>` : ''}
     </header>
 
     <div class="document__layout">
+      <article class="document__body">
+        ${bodyHtml}
+      </article>
+
       <aside class="document__aside" aria-label="Document metadata">
+        <div class="aside-lead">
+          ${meta.status ? `<span class="${statusClass(meta.status)}">${escapeHtml(meta.status)}</span>` : ''}
+          ${meta.code ? `<p class="aside-lead__code">${escapeHtml(meta.code)}</p>` : ''}
+        </div>
         <dl class="facts">
           ${factsHtml}
         </dl>
@@ -585,10 +590,6 @@ function initiativePage({ meta, body, slug }) {
           <p class="aside-block__langs">BG · CS · DA · DE · EL · <strong>EN</strong> · ES · ET · FI · FR · GA · HR · HU · IT · LT · LV · MT · NL · PL · PT · RO · SK · SL · SV</p>
         </div>
       </aside>
-
-      <article class="document__body">
-        ${bodyHtml}
-      </article>
     </div>
   </div>
 </section>`;
