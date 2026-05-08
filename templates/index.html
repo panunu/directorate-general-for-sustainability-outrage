@@ -1,0 +1,63 @@
+<!--
+  templates/index.html — layout for the landing page.
+
+  Edit this file directly to change copy, structure, or add new sections.
+  Placeholders ({{name}}) are replaced by build.js at build time:
+
+    {{site_parent}}     "European Commission" (from SITE config)
+    {{site_dg_long}}    "Directorate-General for Civic Wellbeing"
+    {{site_dg_short}}   "DG WELL"
+    {{site_disclaimer}} The footer disclaimer string
+    {{top_banner}}      The blue "official website" strip
+    {{site_header}}     Masthead + primary navigation
+    {{site_footer}}     The full footer
+    {{count}}           Number of published initiatives (integer)
+    {{count_label}}     "dossier" or "dossiers" (auto-singular/plural)
+    {{cards}}           The rendered cards grid (or empty state)
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Active legislative initiatives — {{site_dg_long}}</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+{{top_banner}}
+{{site_header}}
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="#">Home</a> <span>›</span> <a href="#">Legislation</a> <span>›</span> Active initiatives</p>
+      <h1>Active legislative initiatives</h1>
+      <p class="hero__lede">A consolidated register of legislative dossiers under the responsibility of {{site_dg_long}}, with current status, financial envelope, and underlying scientific basis.</p>
+      <div class="hero__chips" aria-hidden="true">
+        <span class="chip chip--active">All</span>
+        <span class="chip">Directives</span>
+        <span class="chip">Regulations</span>
+        <span class="chip">Recommendations</span>
+        <span class="chip">Decisions</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="initiatives">
+    <div class="container">
+      <header class="initiatives__head">
+        <h2>{{count}} {{count_label}}</h2>
+        <p class="initiatives__sort">Sorted by date of latest action</p>
+      </header>
+      <div class="grid">
+{{cards}}
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{site_footer}}
+</body>
+</html>
