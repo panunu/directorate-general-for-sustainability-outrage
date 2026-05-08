@@ -106,6 +106,13 @@ svg {
   content: "↳ ";
   opacity: 0.7;
 }
+.eu-strip a:hover,
+.eu-strip a:focus {
+  color: var(--eu-gold);
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
 
 /* ---------------------------------------------------------------------------
    Masthead — emblem + parent + DG + language switcher
@@ -166,12 +173,18 @@ svg {
   border: 1px solid transparent;
   border-radius: 1px;
   letter-spacing: 0.04em;
+  cursor: default;
 }
-.lang:hover {
-  color: var(--eu-blue);
-  background: var(--eu-blue-tint);
+.lang:hover,
+.lang:focus {
+  /* Language switcher is non-functional decoration; no interactive feedback */
+  color: var(--muted);
+  background: transparent;
+  text-decoration: none;
 }
-.lang--current {
+.lang--current,
+.lang--current:hover,
+.lang--current:focus {
   color: var(--eu-blue);
   background: #fff;
   border-color: var(--eu-blue);
@@ -207,6 +220,14 @@ svg {
   background: var(--eu-blue-deep);
   font-weight: 600;
 }
+.primary-nav a[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.primary-nav a[aria-disabled="true"]:hover {
+  background: transparent;
+  border-bottom-color: transparent;
+}
 .primary-nav__search {
   margin-left: auto;
   display: flex;
@@ -230,7 +251,7 @@ svg {
    Hero (index landing)
    ------------------------------------------------------------------------- */
 .hero {
-  background: linear-gradient(180deg, var(--paper-tint) 0%, var(--paper) 100%);
+  background: var(--paper);
   border-bottom: 1px solid var(--hairline);
   padding: 32px 0 28px;
 }
@@ -279,6 +300,15 @@ svg {
   background: #fff;
   font-size: 13px;
   color: var(--ink-soft);
+}
+/* Filter chips other than "All" are non-functional placeholders — render
+   them in a clearly disabled state so users don't try to click. */
+.chip:not(.chip--active) {
+  color: var(--hairline-strong);
+  border-color: var(--hairline);
+  background: var(--paper-tint);
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 .chip--active {
   background: var(--eu-blue);
@@ -469,7 +499,7 @@ svg {
    Document (initiative detail)
    ------------------------------------------------------------------------- */
 .document {
-  padding: 28px 0 64px;
+  padding: 32px 0 64px;
   background: var(--paper);
 }
 .document__inner {

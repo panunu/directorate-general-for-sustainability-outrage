@@ -21,11 +21,11 @@ const path = require('path');
 // ---------------------------------------------------------------------------
 const SITE = {
   parent: 'European Commission',
-  dgLong: 'Directorate-General for Civic Wellbeing and Temper Tantrums',
-  dgShort: 'DG WELL',
+  dgLong: 'Directorate-General for Sustainability, Ethics, Public Policy and Outrage',
+  dgShort: 'DG SEPPO',
   tagline: 'Legislative initiatives portal',
   domainHint: 'ec.europa.eu',
-  copyright: '© European Union, 2026',
+  copyright: '© Not the European Union, 2026',
   reuseNotice: 'Reuse of this document is authorised provided the source is acknowledged.',
   disclaimer:
     'This is a fictional work of political satire. It is not affiliated with the European Union or any of its institutions. All initiatives, document codes, and offices depicted are imaginary.',
@@ -424,12 +424,12 @@ function siteHeader(currentPath) {
   </div>
   <nav class="primary-nav" aria-label="Primary">
     <div class="container primary-nav__inner">
-      <a href="${currentPath === '/' ? '#' : '../index.html'}">Home</a>
-      <a href="#">Policies</a>
+      <a aria-disabled="true">Home</a>
+      <a aria-disabled="true">Policies</a>
       <a href="${currentPath === '/' ? '#' : '../index.html'}" aria-current="page">Legislation</a>
-      <a href="#">Consultations</a>
-      <a href="#">Documents</a>
-      <a href="#">Newsroom</a>
+      <a aria-disabled="true">Consultations</a>
+<!--      <a aria-disabled="true">Documents</a>-->
+      <a aria-disabled="true">Newsroom</a>
       <a href="#">About</a>
       <span class="primary-nav__search" role="search">
         <input type="search" placeholder="Search legislation…" aria-label="Search">
@@ -493,7 +493,9 @@ function siteFooter() {
 }
 
 function pageShell({ title, currentPath, content, extraHead = '' }) {
-  const cssPath = currentPath === '/' ? 'assets/styles.css' : '../assets/styles.css';
+  const isRoot = currentPath === '/';
+  const cssPath = isRoot ? 'assets/styles.css' : '../assets/styles.css';
+  const jsPath = isRoot ? 'assets/search.js' : '../assets/search.js';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -501,6 +503,7 @@ function pageShell({ title, currentPath, content, extraHead = '' }) {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${escapeHtml(title)} — ${escapeHtml(SITE.dgLong)}</title>
 <link rel="stylesheet" href="${cssPath}">
+<script src="${jsPath}" defer></script>
 ${extraHead}
 </head>
 <body>
