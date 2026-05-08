@@ -10,7 +10,7 @@ funding_source: "Single Market Programme · LIFE programme · Automotive industr
 lead: "DG REGIO, in cooperation with DG SANTE and the automotive industry"
 date: "21 April 2024"
 status: "Trilogue agreement reached"
-summary: "Repeals tailpipe emission limits in favour of mandatory in-cabin venting. Vehicle occupants form a biofiltration cohort responsible for final-stage absorption of internalised exhaust. Includes minimum-occupancy and informed-consent provisions."
+summary: "Repeals tailpipe emission limits in favour of mandatory in-cabin venting. Vehicle occupants form a biofiltration cohort responsible for partial absorption of internalised exhaust before ambient release."
 hero_topic: "air"
 ---
 
