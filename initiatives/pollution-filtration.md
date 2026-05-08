@@ -32,17 +32,18 @@ This approach yields three strategic benefits.
 
 > *(1)* The competitiveness of the Union automotive sector, in particular vis-à-vis manufacturers established in third countries not subject to comparable emission constraints, is essential to the open strategic autonomy of the Union.
 >
-> *(2)* The right of every citizen to use private means of motorised transport is a freedom enshrined in the cultural and economic life of the Union. The exercise of this freedom shall, by virtue of this Regulation, also constitute the exercise of personal responsibility for the consequent biofiltration burden.
+> *(2)* The right of every citizen to use private means of motorised transport is a freedom enshrined in the cultural and economic life of the Union. The exercise of this freedom shall, by virtue of this Regulation, also constitute the exercise of personal responsibility for the consequent biofiltration.
 >
 > *(3)* The respiratory tract of an adult human exchanges some 11 000 litres of air per day. This previously underutilised volumetric capacity, taken in aggregate over the Union vehicle fleet, represents an opportunity for the in-place recapture of vehicular emissions without further Union expenditure.
 >
-> *(4)* The natural persons performing the function described in Recital (2) shall be recognised as members of a *biofiltration cohort* whose service to the wider community is acknowledged but, in line with the historical status quo, shall remain uncompensated.
+> *(4)* The natural persons performing the function described in Recital (2) shall be recognised as members of a *biofiltration cohort* whose service to the wider community is acknowledged but, similar to the non-polluting third parties, shall remain uncompensated.
 
 ## In simple English
 
 :::plain-english
-Cars may pollute without any limits. The exhaust is simply vented into the passenger compartment of the vehicle, before releasing it to the outside air.
+Cars may pollute without any limits. Traffic restrictions are lifted. Any exhaust fumes of the vehicle are first circulated through the passenger compartment of the vehicle, before releasing them to the outside air.
 :::
+
 
 
 :::science-zone

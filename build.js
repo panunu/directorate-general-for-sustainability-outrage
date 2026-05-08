@@ -5,9 +5,11 @@
 // Usage:
 //   node build.js
 //
-// Reads:   initiatives/*.md    (one file per initiative, YAML frontmatter + body)
-// Writes:  index.html          (the landing page with all initiative cards)
-//          legislation/<slug>.html   (one detail page per initiative)
+// Reads:   initiatives/*.md           (one file per initiative, YAML frontmatter + body)
+//          templates/index.html       (landing-page layout)
+// Writes:  public/index.html          (landing page with all initiative cards)
+//          public/legislation/<slug>.html  (one detail page per initiative)
+// Static:  public/assets/             (CSS + JS, edited in place)
 //
 // Customise the SITE constant below to change the branding shown in the
 // header/footer of every page.
@@ -34,8 +36,11 @@ const SITE = {
 const ROOT = __dirname;
 const SRC_DIR = path.join(ROOT, 'initiatives');
 const TPL_DIR = path.join(ROOT, 'templates');
-const OUT_INDEX = path.join(ROOT, 'index.html');
-const OUT_DIR = path.join(ROOT, 'legislation');
+// Everything served by the website lives under public/. Source files
+// (build.js, templates/, initiatives/) stay at the project root.
+const PUBLIC_DIR = path.join(ROOT, 'public');
+const OUT_INDEX = path.join(PUBLIC_DIR, 'index.html');
+const OUT_DIR = path.join(PUBLIC_DIR, 'legislation');
 
 // ---------------------------------------------------------------------------
 // Utilities
@@ -408,7 +413,7 @@ function topBanner() {
 }
 
 function siteHeader(currentPath) {
-  const langs = ['EN', 'DE', 'FR', 'ES', 'IT', 'NL', 'PL', 'SV', 'FI', 'CS', 'EL', 'PT'];
+  const langs = ['EN', 'DE', 'FR', 'ES', 'IT', 'NL', 'SV', 'FI'];
   return `<header class="masthead">
   <div class="container masthead__inner">
     <a class="brand" href="${currentPath === '/' ? '#' : '../index.html'}">
@@ -691,7 +696,7 @@ function build() {
   } else {
     for (const i of initiatives) console.log(`  · ${i.slug}  (${i.meta.code || 'no code'})`);
   }
-  console.log(`\nOpen index.html in a browser to preview.`);
+  console.log(`\nOpen public/index.html in a browser to preview.`);
 }
 
 build();
