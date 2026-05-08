@@ -7,9 +7,14 @@
 //
 // Reads:   initiatives/*.md           (one file per initiative, YAML frontmatter + body)
 //          templates/index.html       (landing-page layout)
-// Writes:  public/index.html          (landing page with all initiative cards)
-//          public/legislation/<slug>.html  (one detail page per initiative)
-// Static:  public/assets/             (CSS + JS, edited in place)
+//          templates/about.html       (about-page layout)
+// Writes:  docs/index.html            (landing page with all initiative cards)
+//          docs/about.html            (about page)
+//          docs/legislation/<slug>.html    (one detail page per initiative)
+// Static:  docs/assets/               (CSS + JS, edited in place)
+//
+// The output directory is named `docs/` so the site can be served from
+// GitHub Pages (Settings → Pages → Source: main branch / docs folder).
 //
 // Customise the SITE constant below to change the branding shown in the
 // header/footer of every page.
@@ -36,11 +41,12 @@ const SITE = {
 const ROOT = __dirname;
 const SRC_DIR = path.join(ROOT, 'initiatives');
 const TPL_DIR = path.join(ROOT, 'templates');
-// Everything served by the website lives under public/. Source files
+// Everything served by the website lives under docs/. Source files
 // (build.js, templates/, initiatives/) stay at the project root.
-const PUBLIC_DIR = path.join(ROOT, 'public');
-const OUT_INDEX = path.join(PUBLIC_DIR, 'index.html');
-const OUT_DIR = path.join(PUBLIC_DIR, 'legislation');
+// The `docs/` name is required for GitHub Pages serving from a subfolder.
+const DOCS_DIR = path.join(ROOT, 'docs');
+const OUT_INDEX = path.join(DOCS_DIR, 'index.html');
+const OUT_DIR = path.join(DOCS_DIR, 'legislation');
 
 // ---------------------------------------------------------------------------
 // Utilities
@@ -707,7 +713,7 @@ function build() {
   fs.writeFileSync(OUT_INDEX, indexPage(initiatives));
 
   // Write the About page.
-  fs.writeFileSync(path.join(PUBLIC_DIR, 'about.html'), aboutPage());
+  fs.writeFileSync(path.join(DOCS_DIR, 'about.html'), aboutPage());
 
   // Write each initiative.
   for (const init of initiatives) {
@@ -729,7 +735,7 @@ function build() {
   } else {
     for (const i of initiatives) console.log(`  · ${i.slug}  (${i.meta.code || 'no code'})`);
   }
-  console.log(`\nOpen public/index.html in a browser to preview.`);
+  console.log(`\nOpen docs/index.html in a browser to preview.`);
 }
 
 build();
