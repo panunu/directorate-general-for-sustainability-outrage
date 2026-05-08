@@ -21,7 +21,7 @@ const path = require('path');
 // ---------------------------------------------------------------------------
 const SITE = {
   parent: 'European Commission',
-  dgLong: 'Directorate-General for Civic Wellbeing',
+  dgLong: 'Directorate-General for Civic Wellbeing and Temper Tantrums',
   dgShort: 'DG WELL',
   tagline: 'Legislative initiatives portal',
   domainHint: 'ec.europa.eu',
@@ -369,8 +369,8 @@ function topBanner() {
   return `<div class="eu-strip" role="banner">
   <div class="container eu-strip__inner">
     <span class="eu-strip__flag" aria-hidden="true">${emblemSvg(14)}</span>
-    <span class="eu-strip__label">An official website of the European Union</span>
-    <a class="eu-strip__verify" href="#">How do you know?</a>
+    <span class="eu-strip__label">A (not very) official website of the European Union</span>
+    <a class="eu-strip__verify" target="_blank" href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">How do you know?</a>
   </div>
 </div>`;
 }
