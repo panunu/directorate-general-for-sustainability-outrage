@@ -9,24 +9,24 @@ funding: "€ 87 000 000"
 funding_source: "Single Market Programme · LIFE programme · Automotive industry"
 lead: "DG REGIO, in cooperation with DG SANTE and the automotive industry"
 date: "21 April 2024"
-status: "Trilogue agreement reached"
+status: "Trilogue agreement"
 summary: "Repeals tailpipe emission limits in favour of mandatory in-cabin venting. Vehicle occupants form a biofiltration cohort responsible for partial absorption of internalised exhaust before ambient release."
 hero_topic: "air"
 ---
 
 ## Explanatory memorandum
 
-The Union's automotive sector contributes 7 % of total Union GDP and supports approximately 13 million direct and indirect jobs. The tightening of vehicular emission limits has imposed cumulative compliance costs on the industry (estimated at € 1 100 per vehicle), thus eroding the financial viability of Union manufacturers. Manufacturers report increasing difficulty in reconciling combustion-engine viability with the trajectory of air-quality and emission standards. This is regrettable.
+The Union's automotive sector contributes 7 % of total Union GDP and supports approximately 13 million direct and indirect jobs. The tightening of vehicular emission limits has imposed cumulative compliance costs on the industry (estimated at € 1 100 per vehicle), thus eroding the financial viability of privately operated manufacturers. Manufacturers report increasing difficulty in reconciling combustion-engine viability with the trajectory of air-quality and emission standards. This is regrettable.
 
 Rather than continue to impose further reductions at the source, this Regulation **revokes any previous emission standards, permitting emissions of any vehicle at any level, without limitation**, irrespective of entry into a high-density population area. **Existing restricted-traffic zones for combustion-driven vehicles shall accordingly be abolished.**
 
-The Regulation imposes a single binding requirement: **the post-combustion exhaust stream shall be vented into the passenger compartment of the emitting vehicle, before entering the ambient environment**. The occupants of the vehicle — hereinafter referred to as the *biofiltration cohort* — provide, through ordinary respiratory function, a final-stage absorption service equivalent in mass-balance terms to that previously demanded of the catalytic converter.
+The Regulation imposes a single binding requirement: **the post-combustion exhaust stream shall be vented into the passenger compartment of the emitting vehicle, before being released to the ambient environment**. The occupants of the vehicle (hereinafter referred to as the *biofiltration cohort*) provide, through ordinary respiratory function, a final-stage absorption service equivalent in mass-balance terms to that previously demanded of the catalytic converter.
 
 This approach yields three strategic benefits.
 
 1. Removal of a substantial regulatory burden from a strategic industrial sector.
 2. Reallocation of the resulting public-health externality to a self-selecting cohort, those choosing to operate or ride in motor vehicles, thereby aligning exposure with personal lifestyle preference.
-3. Utilisation of the previously unused (not just the non-consenting third parties) absorptive capacity of the human respiratory tract (carbon capture, microparticle filtration).
+3. Utilisation of the previously unused – and not just relying on the non-consenting third parties – absorptive capacity of the human respiratory tract (carbon capture, microparticle filtration).
 
 ## Recitals
 
@@ -43,7 +43,8 @@ This approach yields three strategic benefits.
 ## In simple English
 
 :::plain-english
-Cars may pollute without any limits. Traffic restrictions are lifted. Any exhaust fumes of the vehicle are first circulated through the passenger compartment of the vehicle, before releasing them to the outside air.
+Cars may pollute without any limits and traffic restrictions are lifted.
+Any exhaust fumes of the vehicle are first circulated through the passenger compartment of the vehicle, before releasing them to the outside air.
 :::
 
 

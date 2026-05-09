@@ -785,9 +785,9 @@ svg {
   color: inherit;
 }
 .document__body .callout--science {
-  background: #e8f3e9;
-  border-left-color: #2f7d3e;
-  color: #1f3f25;
+  background: #2f7d3e;
+  border-left-color: #14502a;
+  color: #ffffff;
   position: relative;
   padding-left: 64px;
 }
@@ -798,12 +798,20 @@ svg {
   top: 18px;
   width: 28px;
   height: 28px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4 L22.6 20.6 L1.4 20.6 Z' fill='%232f7d3e' stroke='%2314502a' stroke-width='0.8' stroke-linejoin='round'/><path d='M12 9 V15' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round'/><circle cx='12' cy='17.6' r='1.35' fill='%23ffffff'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4 L22.6 20.6 L1.4 20.6 Z' fill='%23ffffff'/><path d='M12 9 V15' stroke='%2314502a' stroke-width='2.6' stroke-linecap='round'/><circle cx='12' cy='17.6' r='1.35' fill='%2314502a'/></svg>");
   background-repeat: no-repeat;
   background-size: contain;
 }
 .document__body .callout--science strong {
-  color: #14502a;
+  color: #ffffff;
+}
+.document__body .callout--science a {
+  color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.65);
+}
+.document__body .callout--science a:hover {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 @media (max-width: 600px) {
   .document__body .callout--science {
