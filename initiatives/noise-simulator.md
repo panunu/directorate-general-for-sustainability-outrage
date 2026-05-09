@@ -35,14 +35,14 @@ The Regulation reframes the externalities of personal-vehicle sound emission as 
 ## In simple English
 
 :::plain-english
-Cars and other motor vehicles often produce noises that can be disturbing, especially in cities. Some drivers purposefully make those noises even louder. To raise awareness and reduce the volume caused by vehicles, any external sounds produced by any vehicle will be reproduced inside the driver's home – or, in case the driver lives alone, in a relative's home.
+Cars and other motor vehicles often produce noises that can be disturbing, especially in cities. Some drivers purposefully make those noises even louder. To raise awareness and to possibly reduce the volume caused by vehicles, any external sounds produced by any vehicle will be reproduced inside the driver's home – or, in case the driver lives alone, in a relative's home.
 :::
 
 
 :::science-zone
 
 :::callout callout--science
-You may have noticed the satire by now — but the underlying science is unfortunately real. Environmental noise contributes to sleep disturbances, cardiovascular diseases, and even delays in reading age, and the peer-reviewed references that follow are not invented.
+You may have noticed the satire by now – but the underlying science is unfortunately real. Environmental noise contributes to sleep disturbances, cardiovascular diseases, and even delays in reading age, and the peer-reviewed references that follow are not invented.
 :::
 
 ## Scientific basis

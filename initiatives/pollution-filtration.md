@@ -52,7 +52,7 @@ Any exhaust fumes of the vehicle are first circulated through the passenger comp
 :::science-zone
 
 :::callout callout--science
-You may have noticed the satire by now — but the underlying science is unfortunately real. Traffic-related air pollution causes hundreds of thousands of premature deaths in Europe every year, and the peer-reviewed references that follow are not invented.
+You may have noticed the satire by now – but the underlying science is unfortunately real. Traffic-related air pollution causes hundreds of thousands of premature deaths in Europe every year, and the peer-reviewed references that follow are not invented.
 :::
 
 ## Scientific basis
