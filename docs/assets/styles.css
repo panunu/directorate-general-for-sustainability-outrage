@@ -156,6 +156,12 @@ svg {
   color: var(--eu-blue-ink);
   font-weight: 400;
 }
+/* Two variants of the DG name live in the markup. The long form is shown by
+   default; the short form (e.g. "DG SEPPO") only appears below the small-mobile
+   breakpoint where the long name no longer fits. */
+.brand__dg--short {
+  display: none;
+}
 
 .masthead__lang {
   display: flex;
@@ -996,5 +1002,95 @@ svg {
   a {
     color: #000;
     text-decoration: underline;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Mobile chrome — hide the decorative bits, shrink the brand, stack the
+   primary-nav search to its own row, swap the long DG name for the short one
+   when the long name no longer fits.
+   ------------------------------------------------------------------------- */
+@media (max-width: 800px) {
+  .masthead__lang {
+    display: none;
+  }
+  .brand__dg {
+    font-size: 18px;
+  }
+  .brand__parent {
+    font-size: 12px;
+  }
+  .brand__emblem svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .masthead__inner {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    gap: 12px;
+  }
+  .brand {
+    gap: 10px;
+  }
+  .brand__dg {
+    font-size: 17px;
+    line-height: 1.2;
+  }
+  .brand__emblem svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .primary-nav__inner {
+    flex-wrap: wrap;
+  }
+  .primary-nav a {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  .primary-nav__search {
+    margin-left: 0;
+    width: 100%;
+    padding: 8px 14px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .primary-nav__search input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand__dg--long {
+    display: none;
+  }
+  .brand__dg--short {
+    display: inline;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+  .brand__parent {
+    font-size: 11px;
+  }
+
+  .eu-strip {
+    font-size: 11.5px;
+  }
+  .eu-strip__inner {
+    height: auto;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    column-gap: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .eu-strip__verify {
+    display: none;
+  }
+  .eu-strip__label {
+    font-size: 11px;
   }
 }

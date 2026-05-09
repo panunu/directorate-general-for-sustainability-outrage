@@ -4,15 +4,14 @@
   Edit copy directly. Bracketed [placeholder] passages mark spots to replace.
   Placeholders ({{name}}) are substituted by build.js at build time:
 
+    {{head_meta}}       Charset, viewport, title, SEO meta, favicon link
     {{site_dg_long}}, {{site_dg_short}}, {{site_parent}}
     {{top_banner}}, {{site_header}}, {{site_footer}}
 -->
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About — {{site_dg_long}}</title>
+{{head_meta}}
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/search.js" defer></script>
 </head>

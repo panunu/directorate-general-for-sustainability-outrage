@@ -32,6 +32,17 @@ const SITE = {
   dgShort: 'DG SEPPO',
   tagline: 'Legislative initiatives portal',
   domainHint: 'ec.europa.eu',
+  // Public URL where the site is published. Used for canonical links, Open
+  // Graph tags, robots.txt and sitemap.xml. For GitHub Pages this is usually
+  // `https://<user>.github.io/<repo>`. No trailing slash.
+  baseUrl: 'https://https://panunu.github.io/directorate-general-for-sustainability-outrage',
+  language: 'en',
+  // SEO copy for the index and about pages. Per-initiative description comes
+  // from the `summary` frontmatter field on each markdown file.
+  indexDescription:
+    'Directorate-General SEPPO — a satirical legislative-initiatives portal. Each imagined EU directive is paired with real peer-reviewed scientific research on the underlying public-health issue.',
+  aboutDescription:
+    'About Directorate-General SEPPO — a satirical project that addresses real public-policy issues through fictional EU directives paired with peer-reviewed scientific research.',
   copyright: '© Not the European Union, 2026',
   reuseNotice: 'Reuse of this document is authorised provided the source is acknowledged.',
   disclaimer:
@@ -86,6 +97,144 @@ function renderTemplate(tpl, vars) {
 
 function loadTemplate(name) {
   return fs.readFileSync(path.join(TPL_DIR, name), 'utf8');
+}
+
+// ---------------------------------------------------------------------------
+// SEO helpers — compose meta/OG/Twitter tags + JSON-LD structured data per
+// page, plus generated favicon and OG image.
+// ---------------------------------------------------------------------------
+
+function buildUrl(urlPath) {
+  const base = (SITE.baseUrl || '').replace(/\/+$/, '');
+  let p = urlPath || '/';
+  if (!p.startsWith('/')) p = '/' + p;
+  return base + p;
+}
+
+function isoDate(s) {
+  if (!s) return null;
+  const t = Date.parse(s);
+  if (isNaN(t)) return null;
+  return new Date(t).toISOString().slice(0, 10);
+}
+
+function headMeta({ title, description, urlPath, type, currentPath }) {
+  const isInLegislationDir = (currentPath || '').startsWith('/legislation/');
+  const rel = isInLegislationDir ? '../' : '';
+  const fullTitle = `${title} — ${SITE.dgLong}`;
+  const desc = description || '';
+  const canonical = buildUrl(urlPath);
+  const ogImage = buildUrl('/assets/og-image.svg');
+  return [
+    `<meta charset="utf-8">`,
+    `<meta name="viewport" content="width=device-width,initial-scale=1">`,
+    `<title>${escapeHtml(fullTitle)}</title>`,
+    `<meta name="description" content="${escapeAttr(desc)}">`,
+    `<meta name="robots" content="index,follow">`,
+    `<link rel="canonical" href="${escapeAttr(canonical)}">`,
+    `<meta property="og:type" content="${escapeAttr(type || 'website')}">`,
+    `<meta property="og:title" content="${escapeAttr(fullTitle)}">`,
+    `<meta property="og:description" content="${escapeAttr(desc)}">`,
+    `<meta property="og:url" content="${escapeAttr(canonical)}">`,
+    `<meta property="og:image" content="${escapeAttr(ogImage)}">`,
+    `<meta property="og:image:width" content="1200">`,
+    `<meta property="og:image:height" content="630">`,
+    `<meta property="og:site_name" content="${escapeAttr(SITE.dgLong)}">`,
+    `<meta property="og:locale" content="${escapeAttr(SITE.language === 'en' ? 'en_GB' : SITE.language)}">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${escapeAttr(fullTitle)}">`,
+    `<meta name="twitter:description" content="${escapeAttr(desc)}">`,
+    `<meta name="twitter:image" content="${escapeAttr(ogImage)}">`,
+    `<link rel="icon" type="image/svg+xml" href="${rel}favicon.svg">`,
+  ].join('\n');
+}
+
+function articleJsonLd({ meta, slug }) {
+  const url = buildUrl(`/legislation/${slug}.html`);
+  const datePublished = isoDate(meta.date);
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: meta.title || meta.short || slug,
+    name: meta.short || meta.title || slug,
+    description: meta.summary || '',
+    url,
+    image: buildUrl('/assets/og-image.svg'),
+    inLanguage: SITE.language,
+    isFamilyFriendly: true,
+    author: { '@type': 'Organization', name: SITE.dgLong },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.parent,
+      logo: { '@type': 'ImageObject', url: buildUrl('/favicon.svg') },
+    },
+  };
+  if (datePublished) ld.datePublished = datePublished;
+  // The dossier code is a useful identifier for search-result rich snippets.
+  if (meta.code) ld.identifier = meta.code;
+  return `<script type="application/ld+json">${JSON.stringify(ld)}</script>`;
+}
+
+function faviconSvg() {
+  // 12 gold stars on EU blue, viewBox-only so the browser scales it freely.
+  const cx = 50, cy = 50, r = 32;
+  let stars = '';
+  for (let k = 0; k < 12; k++) {
+    const a = (k / 12) * 2 * Math.PI - Math.PI / 2;
+    const x = cx + r * Math.cos(a);
+    const y = cy + r * Math.sin(a);
+    stars += `<g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})"><polygon points="0,-6 1.76,-1.85 6,-1.85 2.62,1.06 3.71,5.14 0,2.74 -3.71,5.14 -2.62,1.06 -6,-1.85 -1.76,-1.85" fill="#FFCC00"/></g>`;
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#003399"/>${stars}</svg>`;
+}
+
+function ogImageSvg() {
+  // 1200×630 social-share preview. Some platforms (Twitter, LinkedIn) handle
+  // SVG inconsistently — for the cleanest result, replace with a 1200×630 PNG
+  // exported from this SVG. Path: docs/assets/og-image.png.
+  const cx = 220, cy = 315, r = 110;
+  let stars = '';
+  for (let k = 0; k < 12; k++) {
+    const a = (k / 12) * 2 * Math.PI - Math.PI / 2;
+    const x = cx + r * Math.cos(a);
+    const y = cy + r * Math.sin(a);
+    stars += `<g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})"><polygon points="0,-18 5.28,-5.55 18,-5.55 7.86,3.18 11.13,15.42 0,8.22 -11.13,15.42 -7.86,3.18 -18,-5.55 -5.28,-5.55" fill="#FFCC00"/></g>`;
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#003399"/>
+  ${stars}
+  <text x="430" y="280" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="400">${escapeHtml(SITE.dgShort)}</text>
+  <text x="430" y="335" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="26" opacity="0.85">${escapeHtml(SITE.dgLong)}</text>
+  <line x1="430" y1="385" x2="600" y2="385" stroke="#FFCC00" stroke-width="3"/>
+  <text x="430" y="430" fill="#FFCC00" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">${escapeHtml(SITE.tagline.toUpperCase())}</text>
+  <text x="430" y="500" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="18" opacity="0.7">${escapeHtml(SITE.parent)}</text>
+</svg>`;
+}
+
+function robotsTxt() {
+  const sitemapUrl = buildUrl('/sitemap.xml');
+  return `User-agent: *\nAllow: /\nSitemap: ${sitemapUrl}\n`;
+}
+
+function sitemapXml(initiatives) {
+  const today = new Date().toISOString().slice(0, 10);
+  const entries = [
+    { loc: buildUrl('/'), lastmod: today, changefreq: 'weekly', priority: '1.0' },
+    { loc: buildUrl('/about.html'), lastmod: today, changefreq: 'monthly', priority: '0.5' },
+    ...initiatives.map((i) => ({
+      loc: buildUrl(`/legislation/${i.slug}.html`),
+      lastmod: isoDate(i.meta.date) || today,
+      changefreq: 'monthly',
+      priority: '0.8',
+    })),
+  ];
+  const urls = entries
+    .map(
+      (e) =>
+        `  <url><loc>${escapeHtml(e.loc)}</loc><lastmod>${e.lastmod}</lastmod><changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`
+    )
+    .join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
 // ---------------------------------------------------------------------------
@@ -443,7 +592,8 @@ function siteHeader(currentPath) {
       <span class="brand__emblem">${emblemSvg(48)}</span>
       <span class="brand__text">
         <span class="brand__parent">${escapeHtml(SITE.parent)}</span>
-        <span class="brand__dg">${escapeHtml(SITE.dgLong)}</span>
+        <span class="brand__dg brand__dg--long">${escapeHtml(SITE.dgLong)}</span>
+        <span class="brand__dg brand__dg--short">${escapeHtml(SITE.dgShort)}</span>
       </span>
     </a>
     <div class="masthead__lang" aria-label="Language">
@@ -520,16 +670,22 @@ function siteFooter() {
 </footer>`;
 }
 
-function pageShell({ title, currentPath, content, extraHead = '' }) {
+function pageShell({
+  title,
+  description = '',
+  currentPath,
+  urlPath,
+  type = 'website',
+  content,
+  extraHead = '',
+}) {
   const isRoot = currentPath === '/';
   const cssPath = isRoot ? 'assets/styles.css' : '../assets/styles.css';
   const jsPath = isRoot ? 'assets/search.js' : '../assets/search.js';
   return `<!doctype html>
-<html lang="en">
+<html lang="${SITE.language}">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${escapeHtml(title)} — ${escapeHtml(SITE.dgLong)}</title>
+${headMeta({ title, description, urlPath: urlPath || currentPath, type, currentPath })}
 <link rel="stylesheet" href="${cssPath}">
 <script src="${jsPath}" defer></script>
 ${extraHead}
@@ -585,6 +741,13 @@ function indexPage(initiatives) {
     site_dg_long: escapeHtml(SITE.dgLong),
     site_dg_short: escapeHtml(SITE.dgShort),
     site_disclaimer: escapeHtml(SITE.disclaimer),
+    head_meta: headMeta({
+      title: 'Active legislative initiatives',
+      description: SITE.indexDescription,
+      urlPath: '/',
+      type: 'website',
+      currentPath: '/',
+    }),
     top_banner: topBanner(),
     site_header: siteHeader('/'),
     site_footer: siteFooter(),
@@ -601,6 +764,13 @@ function aboutPage() {
     site_dg_long: escapeHtml(SITE.dgLong),
     site_dg_short: escapeHtml(SITE.dgShort),
     site_disclaimer: escapeHtml(SITE.disclaimer),
+    head_meta: headMeta({
+      title: 'About',
+      description: SITE.aboutDescription,
+      urlPath: '/about.html',
+      type: 'website',
+      currentPath: '/about.html',
+    }),
     top_banner: topBanner(),
     site_header: siteHeader('/about.html'),
     site_footer: siteFooter(),
@@ -671,7 +841,11 @@ function initiativePage({ meta, body, slug }) {
 
   return pageShell({
     title: meta.short || meta.title || slug,
+    description: meta.summary || '',
+    type: 'article',
+    urlPath: `/legislation/${slug}.html`,
     currentPath: `/legislation/${slug}.html`,
+    extraHead: articleJsonLd({ meta, slug }),
     content,
   });
 }
@@ -728,6 +902,12 @@ function build() {
       fs.unlinkSync(path.join(OUT_DIR, f));
     }
   }
+
+  // SEO assets.
+  fs.writeFileSync(path.join(DOCS_DIR, 'favicon.svg'), faviconSvg());
+  fs.writeFileSync(path.join(DOCS_DIR, 'assets', 'og-image.svg'), ogImageSvg());
+  fs.writeFileSync(path.join(DOCS_DIR, 'robots.txt'), robotsTxt());
+  fs.writeFileSync(path.join(DOCS_DIR, 'sitemap.xml'), sitemapXml(initiatives));
 
   console.log(`Built ${initiatives.length} initiative${initiatives.length === 1 ? '' : 's'}.`);
   if (initiatives.length === 0) {

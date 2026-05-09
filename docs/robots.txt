@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://https://panunu.github.io/directorate-general-for-sustainability-outrage/sitemap.xml
