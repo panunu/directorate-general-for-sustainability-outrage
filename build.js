@@ -285,7 +285,8 @@ function parseFrontmatter(text) {
 //   :::name              -> wrap content in <div class="name">…</div>;
 //                           close with a line containing only ':::'.
 //                           Multiple classes accepted: ':::callout warning'.
-// Tables and images are not (yet) supported.
+//   ![alt](url)          -> <img src="url" alt="alt">
+// Tables are not (yet) supported.
 // ---------------------------------------------------------------------------
 
 function inline(s) {
@@ -293,6 +294,9 @@ function inline(s) {
   s = escapeHtml(s);
   // Bare autolinks <https://...>
   s = s.replace(/&lt;(https?:[^&\s]+)&gt;/g, (_, u) => `<a href="${u}">${u}</a>`);
+  // ![alt](url) — images. Must run before the link rule so the leading '!'
+  // is captured here rather than left as literal text next to a link.
+  s = s.replace(/!\[([^\]]*)\]\(((?:[^()]|\([^()]*\))*)\)/g, (_, t, u) => `<img src="${u}" alt="${t}">`);
   // [text](url) — allows one level of balanced parens inside the URL so
   // that DOIs such as `10.1016/S0140-6736(13)62158-3` survive intact.
   s = s.replace(/\[([^\]]+)\]\(((?:[^()]|\([^()]*\))*)\)/g, (_, t, u) => `<a href="${u}">${t}</a>`);
