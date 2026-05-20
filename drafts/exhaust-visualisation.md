@@ -18,6 +18,8 @@ hero_topic: "air"
 
 [Why this initiative exists. The problem it addresses. Tone: earnest, bureaucratic, never winking.]
 
+Green color, green cities and green washing.
+
 ## Recitals
 
 > *(1)* [First recital — start with treaty references, citation of evidence base, etc.]
