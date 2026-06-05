@@ -24,18 +24,15 @@ The Regulation reframes the externalities of personal-vehicle sound emission as 
 
 ## Recitals
 
-> *(1)* The freedom of self-expression, recognised in Article 11 of the Charter of Fundamental Rights of the European Union, extends in modern Union life to the manner and volume in which natural persons present their motorised conveyances to the wider community. This Regulation does not restrict that freedom.
+> *(1)* Empirical evidence from related fields suggests that the parties most able to influence an individual's behaviour are those sharing the individual's place of residence. Reproducing, within the household, the acoustic output of the operated vehicle aligns the experience of the household with that of the wider community and ensures that behavioural feedback flows from the most proximate parties.
 >
-> *(2)* Persons electing to modify the acoustic profile of their motor vehicle bear a smaller share of the resulting acoustic environment than the residents, pedestrians, and children incidentally exposed to it. This asymmetry between the producer of an externality and the parties bearing its consequences is the principal market failure addressed by this Regulation.
->
-> *(3)* Empirical evidence from related fields suggests that the parties most able to influence an individual's behaviour are those sharing the individual's place of residence. Reproducing, within the household, the acoustic output of the operated vehicle aligns the experience of the household with that of the wider community and ensures that behavioural feedback flows from the most proximate parties.
->
-> *(4)* This Regulation does not restrict the freedom of the operator to modify the vehicle, to install additional sound-producing equipment, or to operate the vehicle at any volume. It confines itself to the passive and symmetrical reproduction of the resulting sound to the operator and the operator's household, and accordingly satisfies the principle of proportionality enshrined in Article 5(4) of the Treaty on European Union.
+> *(2)* This Regulation does not restrict the freedom of the operator to modify the vehicle, to install additional sound-producing equipment, or to operate the vehicle at any volume. It confines itself to the passive and symmetrical reproduction of the resulting sound to the operator and the operator's household, and accordingly satisfies the principle of proportionality enshrined in Article 5(4) of the Treaty on European Union.
 
 ## In simple English
 
 :::plain-english
 Cars and other motor vehicles often produce noises that can be disturbing, especially in cities. Some drivers purposefully make those noises even louder. To raise awareness and to possibly reduce the volume caused by vehicles, any external sounds produced by any vehicle will be reproduced inside the driver's home – or, in case the driver lives alone, in a relative's home.
+
 
 ![Illustration: external vehicle sounds reproduced in real time inside the driver's home.](../assets/illustration-sound-reproduction.png)
 :::
