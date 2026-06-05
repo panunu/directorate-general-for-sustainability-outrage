@@ -9,14 +9,20 @@ funding: "€ 9 000 000"
 funding_source: ""
 lead: "DG ENV, DG MOVE, DG REGIO"
 date: "[DD Month YYYY]"
-status: "[Commission proposal | Council general approach | Trilogue agreed | Adopted | In force]"
+status: "Commission proposal"
 summary: "Addition of a coloring substance to any possibly harmful exhaust"
 hero_topic: "air"
 ---
 
 ## Explanatory memorandum
 
-[Why this initiative exists. The problem it addresses. Tone: earnest, bureaucratic, never winking.]
+Many exhaust fumes, whether industrial or transportation-related, remain hidden from the human eye. On a subjective, individual level, it might be challenging to assess the amount of daily exposure to such pollutants. 
+
+This proposal motions the inclusion of coloring additives on any exhaust fume that has been proven to contain harmful substances.
+
+In line with and to advance the ambitions of the ongoing green city movement, the color palette of these additives shall be strictly dictated. 
+
+A task force . The green washing shall be conducted on a weekly basis.
 
 Green color, green cities and green washing.
 
