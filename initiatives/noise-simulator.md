@@ -31,7 +31,9 @@ The Regulation reframes the externalities of personal-vehicle sound emission as 
 ## In simple English
 
 :::plain-english
-Cars and other motor vehicles often produce noises that can be disturbing, especially in cities. Some drivers purposefully make those noises even louder. Any external sounds produced by any vehicle will be reproduced inside the driver's home. Or, in case the driver lives alone, in a relative's home.
+Cars and other motor vehicles often produce noises that can be disturbing, especially in cities. Some drivers purposefully make those noises even louder.
+
+Any external sounds produced by any vehicle will be reproduced inside the driver's home. Or, in case the driver lives alone, in a relative's home.
 
 
 ![Illustration: external vehicle sounds reproduced in real time inside the driver's home.](../assets/illustration-sound-reproduction.png)

@@ -47,6 +47,7 @@ Cars may pollute without any limits and traffic restrictions are lifted.
 
 Any exhaust fumes of the vehicle are first circulated through the passenger compartment of the vehicle, before releasing them to the outside air.
 
+
 ![Illustration: vehicle exhaust routed into the passenger compartment before release to the outside air.](../assets/illustration-exhaust.png)
 :::
 

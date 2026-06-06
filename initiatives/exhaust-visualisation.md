@@ -31,9 +31,7 @@ The approach thereby reconciles three mutually reinforcing Union priorities: a *
 :::plain-english
 Harmful exhaust fumes are usually invisible, so people cannot tell how much they are breathing in.
 
-
 Green cities: this law adds a green dye to fumes, so the pollution and where it settles on, turns a standard shade of green.
-
 
 Green washing: a special task force is then sent out once a month to wash the green residue off.
 
