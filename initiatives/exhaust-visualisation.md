@@ -11,29 +11,31 @@ lead: "DG ENV, in cooperation with DG MOVE and DG REGIO"
 date: "4 January 2025"
 status: "Commission proposal"
 summary: "Introduces mandatory chromatic indexation of harmful emissions in a standardised nature-green hue, supported by a Union remediation framework under which a dedicated task force performs scheduled weekly green washing of the deposited substances."
-hero_topic: "air"
+hero_topic: "air-green"
 ---
 
 ## Explanatory memorandum
 
-A substantial proportion of harmful exhaust and fume emissions (whether industrial, energy-, or mobility-related) remain below the threshold of unaided human perception. In the absence of a perceptible signal, the individual citizen is structurally unable to undertake an accurate subjective assessment of cumulative daily exposure. This information asymmetry between the emission and the exposed natural person constitutes a persistent obstacle to the proper functioning of the internal market in clean air.
+A substantial proportion of harmful exhaust and fume emissions (whether industrial, energy-, or mobility-related) remain below the threshold of unaided human perception. In the absence of a perceptible signal, the individual citizen is unable to undertake an accurate subjective assessment of cumulative exposure to such pollutants. This information asymmetry between the emission and the exposed natural person constitutes a persistent obstacle to the proper functioning of the internal market in clean air.
 
-This Directive establishes a **mandatory chromatic indexation regime**, under which any emission stream proven to contain substances harmful to the general population, to plant or animal life, or to any other natural inhabitants of the affected area, shall be supplemented with a standardised coloring additive rendering the emission, and its subsequent deposition, fully perceptible to the unaided eye.
+This Directive establishes a mandatory chromatic indexation regime, under which **any emission stream proven to contain substances harmful** to the general population, to plant or animal life, or to any other natural inhabitants of the affected area, **shall be supplemented with a standardised coloring additive** rendering the emission, and its subsequent deposition, fully perceptible to the unaided eye.
 
 In coherence with, and so as to operationalise the ambitions of, the ongoing green-city movement, the chromatic specification of the additive shall be strictly harmonised across the Union. The prescribed hue shall correspond to a single binding nature-green reference value [paint/RAL standard to be specified by implementing act], thereby ensuring visual consistency irrespective of Member State, source sector, or substance.
 
-The Directive further establishes a dedicated **Remediation Task Force** [designation to be determined], whose mandate is the operational management of the periodic removal of the deposited coloured substances from the affected surfaces and habitats. This remediation cycle (hereinafter *green washing*) shall be conducted on a weekly basis according to a harmonised Union calendar.
+The Directive further **establishes a dedicated Remediation Task Force** [designation to be determined], whose mandate is **the operational management of the periodic removal of the deposited coloured substances** from the affected surfaces and habitats. This remediation cycle (hereinafter *green washing*) shall be conducted on a monthly basis according to a harmonised Union calendar.
 
-The approach thereby reconciles three mutually reinforcing Union priorities: a **green** colour, applied at standardised reference value; the visible advancement of **green cities**, in which the indexed emissions are rendered chromatically coherent with the surrounding urban-greening agenda; and a recurring, schedulable, and fully auditable programme of **green washing**.
+The approach thereby reconciles three mutually reinforcing Union priorities: a **green** colour, applied at standardised reference value; the visible advancement of **green cities**, in which the emissions are rendered chromatically coherent with the surrounding urban-greening agenda; and a recurring, schedulable, and fully auditable programme of **green washing**.
 
 ## In simple English
 
 :::plain-english
 Harmful exhaust fumes are usually invisible, so people cannot tell how much they are breathing in.
 
+
 Green cities: this law adds a green dye to fumes, so the pollution and where it settles on, turns a standard shade of green.
 
-Green washing: a special task force is then sent out once a week to wash the green residue off.
+
+Green washing: a special task force is then sent out once a month to wash the green residue off.
 
 
 ![Illustration: invisible exhaust dyed a standardised nature-green, with a task force washing the coloured residue from city surfaces.](../assets/illustration-green-washing.png)
@@ -42,7 +44,7 @@ Green washing: a special task force is then sent out once a week to wash the gre
 :::science-zone
 
 :::callout callout--science
-You may have noticed the satire by now — colouring a hazard green and washing it away weekly is, quite literally, *greenwashing*. But the cognitive science underneath is real: whether we can *see* a hazard genuinely changes how dangerous we judge it to be, and the references below are not invented.
+You may have noticed the satire by now. Still, the cognitive science is real: whether we can see a hazard genuinely changes how dangerous we judge it to be. Currently, we produce many "invisible" byproducts that have an ill-effect on our environment and even on ourselves (microplastics, pollution, CO2). 
 :::
 
 ## Scientific basis

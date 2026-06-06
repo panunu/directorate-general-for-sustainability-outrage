@@ -11,7 +11,7 @@ lead: "[DG XYZ, in cooperation with DG ABC]"
 date: "[DD Month YYYY]"
 status: "[Commission proposal | Council general approach | Trilogue agreed | Adopted | In force]"
 summary: "[One or two sentences shown on the index card.]"
-hero_topic: "[noise | light | nature | water | air | sleep | screens | other]"
+hero_topic: "[noise | light | nature | water | air | air-green | sleep | screens | other]"
 ---
 
 ## Explanatory memorandum

@@ -406,9 +406,21 @@ function mdToHtml(md) {
       continue;
     }
 
-    // blank line
+    // blank line(s): one blank ends the current block as usual; each
+    // *additional* consecutive blank becomes a line of vertical space, so
+    // authors can deliberately space content out (e.g. before an image).
+    // Suppressed at the very start/end so stray trailing blanks inside a
+    // block don't leave dangling gaps.
     if (line.trim() === '') {
       i++;
+      let extra = 0;
+      while (i < lines.length && lines[i].trim() === '') {
+        extra++;
+        i++;
+      }
+      if (out.length > 0 && i < lines.length) {
+        for (let k = 0; k < extra; k++) out.push('<br>');
+      }
       continue;
     }
 
@@ -428,7 +440,8 @@ function mdToHtml(md) {
       para.push(lines[i]);
       i++;
     }
-    out.push(`<p>${inline(para.join('\n'))}</p>`);
+    // Single newlines within a paragraph are honoured as hard line breaks.
+    out.push(`<p>${inline(para.join('\n')).replace(/\n/g, '<br>\n')}</p>`);
   }
 
   return out.join('\n');
@@ -504,6 +517,26 @@ function heroSvg(topic) {
       const y = Math.random() * 160;
       const r = Math.random() * 2 + 0.5;
       return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}"/>`;
+    }).join('\n    ')}
+  </g>
+</svg>`;
+    case 'air-green':
+      // Exhaust rendered visible by the mandated nature-green dye: green
+      // plumes rising into a field of drifting green particles.
+      return `<svg viewBox="0 0 600 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect width="600" height="160" fill="#e8f1e2"/>
+  <g fill="none" stroke="#3f7a34" stroke-width="1.2" opacity="0.55">
+    ${Array.from({ length: 4 }, (_, k) => {
+      const x = 90 + k * 150;
+      return `<path d="M${x} 160 q ${10 + (k % 2) * 14} -45 ${-6} -80 q -14 -34 4 -64"/>`;
+    }).join('\n    ')}
+  </g>
+  <g fill="#4a8a3c">
+    ${Array.from({ length: 80 }, () => {
+      const x = Math.random() * 600;
+      const y = Math.random() * 160;
+      const r = Math.random() * 2 + 0.5;
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" opacity="${(0.35 + Math.random() * 0.45).toFixed(2)}"/>`;
     }).join('\n    ')}
   </g>
 </svg>`;
