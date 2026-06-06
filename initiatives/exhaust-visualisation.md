@@ -16,15 +16,15 @@ hero_topic: "air-green"
 
 ## Explanatory memorandum
 
-A substantial proportion of harmful exhaust and fume emissions (whether industrial, energy-, or mobility-related) remain below the threshold of unaided human perception. In the absence of a perceptible signal, the individual citizen is unable to undertake an accurate subjective assessment of cumulative exposure to such pollutants. This information asymmetry between the emission and the exposed natural person constitutes a persistent obstacle to the proper functioning of the internal market in clean air.
+A significant proportion of harmful exhaust and fume emissions (whether industrial, energy-, or mobility-related) remain below the threshold of unaided human perception. In the absence of a perceptible signal, the citizens are unable to undertake an accurate subjective assessment of cumulative exposure to such pollutants. This information asymmetry between the emission and the exposed natural person constitutes a persistent obstacle to the proper functioning of the internal market in clean air.
 
-This Directive establishes a mandatory chromatic indexation regime, under which **any emission stream proven to contain substances harmful** to the general population, to plant or animal life, or to any other natural inhabitants of the affected area, **shall be supplemented with a standardised coloring additive** rendering the emission, and its subsequent deposition, fully perceptible to the unaided eye.
+This Directive establishes a mandatory chromatic indexation regime, under which **any emission stream proven to contain substances harmful** to the general population, to plant or animal life, or to any other natural inhabitants of the affected area, **shall be supplemented with a standardised coloring additive** rendering the emission, and its residue, fully perceptible to the unaided eye.
 
 In coherence with, and so as to operationalise the ambitions of, the ongoing green-city movement, the chromatic specification of the additive shall be strictly harmonised across the Union. The prescribed hue shall correspond to a single binding nature-green reference value [paint/RAL standard to be specified by implementing act], thereby ensuring visual consistency irrespective of Member State, source sector, or substance.
 
 The Directive further **establishes a dedicated Remediation Task Force** [designation to be determined], whose mandate is **the operational management of the periodic removal of the deposited coloured substances** from the affected surfaces and habitats. This remediation cycle (hereinafter *green washing*) shall be conducted on a monthly basis according to a harmonised Union calendar.
 
-The approach thereby reconciles three mutually reinforcing Union priorities: a **green** colour, applied at standardised reference value; the visible advancement of **green cities**, in which the emissions are rendered chromatically coherent with the surrounding urban-greening agenda; and a recurring, schedulable, and fully auditable programme of **green washing**.
+The approach thereby reconciles three mutually reinforcing Union priorities: a **green colour**, applied at standardised reference value; the visible advancement of **green cities**, in which the emissions are rendered chromatically coherent with the surrounding urban-greening agenda; and a recurring, schedulable, and fully auditable programme of **green washing**.
 
 ## In simple English
 
