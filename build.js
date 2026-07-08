@@ -679,8 +679,8 @@ function siteFooter() {
     <div class="site-footer__col">
       <h4>${escapeHtml(SITE.dgShort)}</h4>
       <ul>
-        <li><a href="#">About this directorate</a></li>
-        <li><a href="#">Commissioner</a></li>
+        <li><a href="/about.html">About this directorate</a></li>
+        <li><a href="/about.html">Commissioner</a></li>
         <li><a href="#">Strategy 2024–2029</a></li>
         <li><a href="#">Annual activity report</a></li>
       </ul>
@@ -706,7 +706,7 @@ function siteFooter() {
     <div class="site-footer__col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="#">Contact ${escapeHtml(SITE.dgShort)}</a></li>
+        <li><a href="/about.html">Contact ${escapeHtml(SITE.dgShort)}</a></li>
         <li><a href="#">Find an office</a></li>
         <li><a href="#">Press service</a></li>
       </ul>

@@ -35,7 +35,6 @@ Green cities: this law adds a green dye to fumes, so the pollution and where it 
 
 Green washing: a special task force is then sent out once a month to wash the green residue off.
 
-
 ![Illustration: invisible exhaust dyed a standardised nature-green, with a task force washing the coloured residue from city surfaces.](../assets/illustration-green-washing.png)
 :::
 

@@ -47,14 +47,13 @@ Cars may pollute without any limits and traffic restrictions are lifted.
 
 Any exhaust fumes of the vehicle are first circulated through the passenger compartment of the vehicle, before releasing them to the outside air.
 
-
 ![Illustration: vehicle exhaust routed into the passenger compartment before release to the outside air.](../assets/illustration-exhaust.png)
 :::
 
 :::science-zone
 
 :::callout callout--science
-You may have noticed the satire by now. Unfortunately, the underlying science is not. Even if you do not care about CO2 accumulation, traffic-related air pollution causes hundreds of thousands of premature deaths every year (and that is just Europe). 
+You may have noticed the satire by now. Unfortunately, the underlying science is not satire. Even if you do not care about CO2 accumulation, traffic-related air pollution causes hundreds of thousands of premature deaths every year (and that is just Europe). 
 :::
 
 ## Scientific basis

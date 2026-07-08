@@ -730,7 +730,7 @@ svg {
    references into a single, clearly bounded block. Visually marks the
    point at which the satirical body ends and the genuine science begins. */
 .document__body .science-zone {
-  margin: 72px 0 40px;
+  margin: 40px 0 40px;
   padding: 28px 32px 24px;
   background: #f7faf6;
   border: 1px solid var(--hairline);
@@ -925,7 +925,10 @@ svg {
 .document__body .plain-english p {
   margin: 0;
 }
-
+.document__body .plain-english p img {
+  margin-top: 16px;
+  border-radius: 2px;
+}
 /* Articles section — pushed to the back; rendered slightly smaller so the
    reader gets the gist (plain-English + science) before the legal apparatus */
 .document__body .articles {
