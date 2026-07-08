@@ -1,6 +1,6 @@
 ---
 title: "Directive of the European Parliament and of the Council on the mandatory chromatic indexation of harmful exhaust and fume emissions and the establishment of a Union framework for their periodic remediation"
-short: "Chromatic Emission Indexation and Periodic Remediation Framework"
+short: "Chromatic Emission Indexation"
 slug: "coloring-harmful-exhaust-fumes"
 code: "COM(2025) 0337 final"
 procedure: "2025/0142 (COD)"

@@ -8,7 +8,7 @@
   --eu-blue-tint: #e6ecf6;
   --eu-gold: #ffcc00;
   --ink: #14161c;
-  --ink-soft: #3b4252;
+  --ink-soft: #4b5162;
   --muted: #6b7280;
   --hairline: #d6d8e0;
   --hairline-strong: #b9bcc6;
@@ -569,6 +569,7 @@ svg {
 
 .document__aside {
   font-size: 13px;
+  color: var(--ink-soft);
   border-left: 4px solid var(--eu-blue);
   padding: 0 0 0 18px;
   align-self: start;
@@ -597,7 +598,7 @@ svg {
 .aside-lead__code {
   font-family: var(--mono);
   font-size: 13px;
-  color: var(--ink);
+  color: var(--ink-soft);
   margin: 0;
   letter-spacing: 0.02em;
   word-break: break-word;
@@ -622,7 +623,7 @@ svg {
 }
 .facts dd {
   margin: 0;
-  color: var(--ink);
+  color: var(--ink-soft);
   font-size: 14px;
 }
 .aside-block {
@@ -658,7 +659,7 @@ svg {
   margin: 0;
 }
 .aside-block__langs strong {
-  color: var(--eu-blue);
+  color: var(--ink-soft);
 }
 
 /* Body of the legislative document */
@@ -729,11 +730,10 @@ svg {
    references into a single, clearly bounded block. Visually marks the
    point at which the satirical body ends and the genuine science begins. */
 .document__body .science-zone {
-  margin: 44px 0 40px;
+  margin: 72px 0 40px;
   padding: 28px 32px 24px;
   background: #f7faf6;
   border: 1px solid var(--hairline);
-  border-top: 4px solid #2f7d3e;
   border-radius: 4px;
 }
 .document__body .science-zone > *:first-child {
@@ -747,6 +747,24 @@ svg {
 }
 .document__body .science-zone .callout {
   margin: 0 0 24px;
+}
+/* The intro callout leads the section, so give it more presence: larger type,
+   more generous padding and breathing room. */
+.document__body .science-zone .callout--science {
+  font-size: 18px;
+  line-height: 1.65;
+  padding: 26px 30px 24px 72px;
+}
+.document__body .science-zone .callout--science::before {
+  top: 26px;
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 600px) {
+  .document__body .science-zone .callout--science {
+    font-size: 16.5px;
+    padding: 22px 20px 20px 58px;
+  }
 }
 .document__body .science-zone h2,
 .document__body .science-zone h3,
@@ -769,6 +787,52 @@ svg {
   .document__body .science-zone {
     padding: 22px 18px 18px;
   }
+}
+
+/* Scientific basis accordion — the full reasoning and references collapse
+   behind a toggle so the section leads with the plain-language intro. */
+.document__body .scientific-text {
+  margin-top: 24px;
+  border-top: 1px solid #cfe3d3;
+}
+.document__body .scientific-text > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0 4px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2f7d3e;
+}
+.document__body .scientific-text > summary::-webkit-details-marker {
+  display: none;
+}
+.document__body .scientific-text > summary::after {
+  content: "";
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.document__body .scientific-text[open] > summary::after {
+  transform: translateY(2px) rotate(-135deg);
+}
+.document__body .scientific-text > summary:hover {
+  color: #14502a;
+}
+.document__body .scientific-text__body > *:first-child {
+  margin-top: 16px;
+}
+.document__body .scientific-text__body > *:last-child {
+  margin-bottom: 0;
 }
 
 /* Callouts — coloured highlight boxes used to break the fourth wall */

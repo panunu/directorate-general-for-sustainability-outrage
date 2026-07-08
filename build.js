@@ -342,6 +342,28 @@ function mdToHtml(md) {
         }
         i++;
       }
+      // Science zone gets special treatment: the intro callout stays in full
+      // view, while the heavy "Scientific basis" heading + body + references
+      // collapse into a <details> accordion so the section leads with the
+      // plain-language intro and hides the detail behind a toggle.
+      if (cls === 'science-zone') {
+        const hIdx = block.findIndex((l) => /^##\s+/.test(l));
+        if (hIdx !== -1) {
+          const intro = block.slice(0, hIdx);
+          const summary = block[hIdx].replace(/^##\s+/, '').replace(/\s*#*\s*$/, '');
+          const body = block.slice(hIdx + 1);
+          out.push(
+            `<div class="${escapeAttr(cls)}">\n` +
+              `${mdToHtml(intro.join('\n'))}\n` +
+              `<details class="scientific-text">\n` +
+              `<summary>${inline(summary)}</summary>\n` +
+              `<div class="scientific-text__body">\n${mdToHtml(body.join('\n'))}\n</div>\n` +
+              `</details>\n` +
+              `</div>`
+          );
+          continue;
+        }
+      }
       out.push(`<div class="${escapeAttr(cls)}">\n${mdToHtml(block.join('\n'))}\n</div>`);
       continue;
     }
@@ -640,10 +662,7 @@ function siteHeader(currentPath) {
   <nav class="primary-nav" aria-label="Primary">
     <div class="container primary-nav__inner">
       <a aria-disabled="true">Home</a>
-      <a aria-disabled="true">Policies</a>
       <a href="${indexHref}"${cur(isLegislationSection)}>Legislation</a>
-      <a aria-disabled="true">Consultations</a>
-<!--      <a aria-disabled="true">Documents</a>-->
       <a aria-disabled="true">Newsroom</a>
       <a href="${aboutHref}"${cur(isAbout)}>About</a>
       <span class="primary-nav__search" role="search">
@@ -700,7 +719,7 @@ function siteFooter() {
       <li><a href="#">Cookies</a></li>
       <li><a href="#">Privacy policy</a></li>
       <li><a href="#">Accessibility</a></li>
-      <li><a href="#">Sitemap</a></li>
+      <li><a href="/sitemap.xml">Sitemap</a></li>
     </ul>
   </div>
   <div class="container site-footer__disclaimer">${escapeHtml(SITE.disclaimer)}</div>
