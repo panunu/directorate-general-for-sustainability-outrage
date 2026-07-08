@@ -35,7 +35,7 @@ const SITE = {
   // Public URL where the site is published. Used for canonical links, Open
   // Graph tags, robots.txt and sitemap.xml. For GitHub Pages this is usually
   // `https://<user>.github.io/<repo>`. No trailing slash.
-  baseUrl: 'https://https://panunu.github.io/directorate-general-for-sustainability-outrage',
+  baseUrl: 'https://panunu.github.io/directorate-general-for-sustainability-outrage',
   language: 'en',
   // SEO copy for the index and about pages. Per-initiative description comes
   // from the `summary` frontmatter field on each markdown file.
@@ -673,14 +673,17 @@ function siteHeader(currentPath) {
 </header>`;
 }
 
-function siteFooter() {
+function siteFooter(currentPath) {
+  // Detail pages live under /legislation/, so links to root-level files need a
+  // '../' prefix — mirrors the header's relative-path handling.
+  const rel = currentPath.startsWith('/legislation/') ? '../' : '';
   return `<footer class="site-footer">
   <div class="container site-footer__top">
     <div class="site-footer__col">
       <h4>${escapeHtml(SITE.dgShort)}</h4>
       <ul>
-        <li><a href="/about.html">About this directorate</a></li>
-        <li><a href="/about.html">Commissioner</a></li>
+        <li><a href="${rel}about.html">About this directorate</a></li>
+        <li><a href="${rel}about.html">Commissioner</a></li>
         <li><a href="#">Strategy 2024–2029</a></li>
         <li><a href="#">Annual activity report</a></li>
       </ul>
@@ -706,7 +709,7 @@ function siteFooter() {
     <div class="site-footer__col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="/about.html">Contact ${escapeHtml(SITE.dgShort)}</a></li>
+        <li><a href="${rel}about.html">Contact ${escapeHtml(SITE.dgShort)}</a></li>
         <li><a href="#">Find an office</a></li>
         <li><a href="#">Press service</a></li>
       </ul>
@@ -719,7 +722,7 @@ function siteFooter() {
       <li><a href="#">Cookies</a></li>
       <li><a href="#">Privacy policy</a></li>
       <li><a href="#">Accessibility</a></li>
-      <li><a href="/sitemap.xml">Sitemap</a></li>
+      <li><a href="${rel}sitemap.xml">Sitemap</a></li>
     </ul>
   </div>
   <div class="container site-footer__disclaimer">${escapeHtml(SITE.disclaimer)}</div>
@@ -752,7 +755,7 @@ ${siteHeader(currentPath)}
 <main id="main">
 ${content}
 </main>
-${siteFooter()}
+${siteFooter(currentPath)}
 </body>
 </html>
 `;
@@ -806,7 +809,7 @@ function indexPage(initiatives) {
     }),
     top_banner: topBanner(),
     site_header: siteHeader('/'),
-    site_footer: siteFooter(),
+    site_footer: siteFooter('/'),
     count: initiatives.length,
     count_label: initiatives.length === 1 ? 'dossier' : 'dossiers',
     cards,
@@ -829,7 +832,7 @@ function aboutPage() {
     }),
     top_banner: topBanner(),
     site_header: siteHeader('/about.html'),
-    site_footer: siteFooter(),
+    site_footer: siteFooter('/about.html'),
   });
 }
 
